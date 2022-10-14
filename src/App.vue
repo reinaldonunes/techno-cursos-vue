@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style>
+*{
+  box-sizing: border-box;
+}
   body{
     margin:0;
     font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -36,5 +39,22 @@ export default {
 
   a.router-link-exact-active{
     color:#1DE9B6;
+  }
+
+  .v-enter{
+    opacity:0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  .v-enter-active{
+    transition:all .3s;
+  }
+
+  .btn-info{
+    border-color:#1DE9B6;
+    background:#1DE9B6;
+  }
+  .btn-info:hover{
+    background:#14b18a;
+    border-color:#14b18a;
   }
 </style>

@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 .progress-bar{
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   right:0;

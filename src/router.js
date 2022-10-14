@@ -3,6 +3,8 @@ import Router from 'vue-router';
 import HomePage from './views/HomePage.vue';
 import CoursesList from './views/CoursesList.vue';
 import ContactUs from './views/ContactUs.vue';
+import SuccessPage from './views/SuccessPage.vue';
+import CourseView from './views/CourseView.vue';
 
 
 
@@ -29,9 +31,20 @@ export default new Router({
       component: CoursesList
     },
     {
+      path: "/cursos/:curso",
+      name: "course",
+      component: CourseView,
+      props: true
+    },
+    {
       path: '/contato',
       name: 'contact',
       component: ContactUs
+    },
+    {
+      path: '/sucesso',
+      name: 'success',
+      component: SuccessPage
     }
   ]
 })
