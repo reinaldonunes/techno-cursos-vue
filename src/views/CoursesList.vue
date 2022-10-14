@@ -1,23 +1,21 @@
 <template>
   <div>
     <LoadingStatus />
-    <h1>Inicial</h1>
+    <h1>Lista de Cursos</h1>
     <pre>{{ api }}</pre>
   </div>
 </template>
 
 <script>
   import fetchData from '@/services/fetchData.js';
-  import LoadingStatus from '@/components/LoadingStatus.vue';
-
+  
   export default {
-    name: "HomePage",
+    name: 'CoursesList',
     mixins: [fetchData],
-    created() {
-        this.fetchData("/home");
-    },
-    components: { LoadingStatus }
-}
+    created(){
+      this.fetchData("/cursos");
+    }
+  }
 </script>
 
 <style>
