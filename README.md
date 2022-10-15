@@ -1,8 +1,19 @@
-# origamid-techno-cursos
+# Projeto experimental Vue.js + vue-router + json-server
+
+## Tecnologies
+- Vue.js
+- Vue-Router
+- Json-server
+- BoostrapVue
 
 ## Project setup
 ```
 npm install
+```
+
+###  Installing Json-Server
+```
+npm install -g json-server
 ```
 
 ### Compiles and hot-reloads for development
@@ -10,15 +21,8 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Running json data
 ```
-npm run build
+$ cd api
+json-server --watch api.json
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

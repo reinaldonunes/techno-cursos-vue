@@ -5,8 +5,7 @@ import CoursesList from './views/CoursesList.vue';
 import ContactUs from './views/ContactUs.vue';
 import SuccessPage from './views/SuccessPage.vue';
 import CourseView from './views/CourseView.vue';
-
-
+import CourseLesson from './views/CourseLesson.vue';
 
 Vue.use(Router)
 
@@ -34,7 +33,15 @@ export default new Router({
       path: "/cursos/:curso",
       name: "course",
       component: CourseView,
-      props: true
+      props: true,
+      children: [
+        {
+          path: ':aula',
+          name: 'lesson',
+          component: CourseLesson,
+          props: true,
+        }
+      ]
     },
     {
       path: '/contato',
